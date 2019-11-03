@@ -14,6 +14,6 @@ namespace Domain.Entidade
         public string NomeMae { get; set; }
         public int TempoResidencia { get; set; }
 
-
+        
     }
 }

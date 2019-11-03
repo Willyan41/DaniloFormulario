@@ -1,0 +1,19 @@
+﻿@model ClienteViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Bem vindo a nossa página de Cliente</h2>
+
+<div id="add-cliente">
+    @Html.Partial("Add", Model)
+</div>
+
+<div id="cnt-cliente">
+    @if (Model.Clientes.Any())
+    {
+        @Html.Partial("Cursos", Model.Clientes)
+    }
+</div>
+

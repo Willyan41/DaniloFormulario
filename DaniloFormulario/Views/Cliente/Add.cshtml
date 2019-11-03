@@ -1,0 +1,53 @@
+﻿@model ClienteViewModel
+<form asp-controller="Cliente" asp-action="Add" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="Nome">Nome</label>
+            <input asp-for="Nome" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="CPF">Nome</label>
+            <input asp-for="CPF" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="RG">Nome</label>
+            <input asp-for="RG" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="DataNascimento">Nome</label>
+            <input asp-for="DataNascimento" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="CNH">Nome</label>
+            <input asp-for="CNH" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="LocalNascimento">Nome</label>
+            <input asp-for="LocalNascimento" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="NomePai">Nome</label>
+            <input asp-for="NomePai" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="NomeMae">Nome</label>
+            <input asp-for="NomeMae" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="TempoResidencia">Nome</label>
+            <input asp-for="TempoResidencia" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

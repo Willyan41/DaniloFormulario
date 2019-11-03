@@ -67,7 +67,7 @@ namespace DaniloFormulario.Controllers
 
         [HttpPost]
 
-        public async Task<ActionResult> Add(ClienteViewModel model)
+        public IActionResult Add(ClienteViewModel model)
         {
 
             if (ModelState.IsValid)
