@@ -13,14 +13,13 @@ namespace DaniloFormulario.Controllers
     public class ClienteController : BaseController
     {
         ClienteGerenciador clienteGerenciador;
-        private IHostingEnvironment _env;
+        //private IHostingEnvironment _env;
 
-        public ClienteController(IHostingEnvironment env)
-        {
-            clienteGerenciador = new ClienteGerenciador();
-            _env = env;
+        //public ClienteController()
+        //{
+        //    clienteGerenciador = new ClienteGerenciador();
 
-        }
+        //}
 
         public IActionResult Index()
         {
