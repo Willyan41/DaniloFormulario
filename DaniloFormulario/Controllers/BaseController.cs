@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace DaniloFormulario.Controllers
 {
-    [Authorize]
-    public class BaseController : Controller
+       public class BaseController : Controller
     {
     }
 }

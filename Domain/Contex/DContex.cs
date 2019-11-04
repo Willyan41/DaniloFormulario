@@ -1,6 +1,7 @@
 ﻿using Domain.Entidade;
 using Domain.Map;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore;
 
 namespace Domain.Contex
 {
@@ -34,8 +35,7 @@ namespace Domain.Contex
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server= Bombinha;Initial Catalog=DANILO_VEICULOS;Integrated Security=True");
-
+            optionsBuilder.UseSqlServer(@"Server=BOMBINHA;Initial Catalog=DANILO_VEICULOS;Integrated Security=True");
         }
 
 

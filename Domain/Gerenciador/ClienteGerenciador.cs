@@ -85,10 +85,5 @@ namespace Domain.Gerenciador
 
         }
 
-
-
-
-
-
     }
 }
