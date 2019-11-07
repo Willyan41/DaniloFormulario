@@ -52,10 +52,10 @@ namespace Domain.Gerenciador
             }
         }
 
-        public void RecuperarPorId(int Id)
+        public Endereco RecuperarPorId(int Id)
         {
 
-            _context.Enderecos.Find(Id);
+           return _context.Enderecos.Find(Id);
 
         }
 

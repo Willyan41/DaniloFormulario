@@ -1,0 +1,33 @@
+﻿@model DadosProfissionaisViewModel
+<form asp-controller="DadosProfissionais" asp-action="Add" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="Autonomo">Autonomo</label>
+            <input asp-for="Autonomo" required class="pure-input-2-3" />
+        </div>
+        <div class="pure-control-group">
+            <label asp-for="Empresa">Empresa</label>
+            <input asp-for="Empresa" required class="pure-input-2-3" />
+        </div>
+
+
+        <div class="pure-control-group">
+            <label asp-for="Cargo">Cargo</label>
+            <input asp-for="Cargo" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="DataAdmissao">Data Admissao</label>
+            <input asp-for="DataAdmissao" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="Salario">Salario</label>
+            <input asp-for="Salario" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

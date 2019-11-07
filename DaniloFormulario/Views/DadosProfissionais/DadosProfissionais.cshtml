@@ -1,0 +1,42 @@
+﻿@model IQueryable<DadosProfissionaisViewModel>
+
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Autonomo</th>
+            <th>Empresa</th>
+            <th>Cargo</th>
+            <th>DataAdmissao</th>
+            <th>Salario</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Autonomo</td>
+                    <td>@p.Empresa</td>
+                    <td>@p.Cargo</td>
+                    <td>@p.DataAdmissao</td>
+                    <td>@p.Salario</td>
+
+                    <td>
+                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#add-DadosProfissionais" href='@Url.Action("Add", "DadosProfissionais", new { Id = p.Id })' title="alterar Dados Profissionais">
+                            <i class="material-icons">
+                                create
+                            </i>
+                        </a>
+                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#cnt-DadosProfissionais" href='@Url.Action("Delete", "DadosProfissionais", new { Id = p.Id })' title="deletar Dados Profissionais" data-ajax-confirm="Deseja realmente excluir Dados Profissionais?">
+                            <i class="material-icons">
+                                restore_from_trash
+                            </i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

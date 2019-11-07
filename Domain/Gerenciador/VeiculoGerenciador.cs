@@ -50,9 +50,9 @@ namespace Domain.Gerenciador
             }
         }
 
-        public void RecuperarPorId(int Id)
+        public Veiculo RecuperarPorId(int Id)
         {
-            _context.Veiculos.Find(Id);
+          return  _context.Veiculos.Find(Id);
         }
 
         public IQueryable<Veiculo> RecuperarVeiculo()

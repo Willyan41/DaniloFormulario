@@ -47,9 +47,9 @@ namespace Domain.Gerenciador
             }
         }
 
-        public void RecuperarPorId(int Id)
+        public Venda RecuperarPorId(int Id)
         {
-            _context.Vendas.Find(Id);
+           return _context.Vendas.Find(Id);
         }
 
         public IQueryable<Venda> RecuperarVenda()

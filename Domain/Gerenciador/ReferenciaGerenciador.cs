@@ -50,9 +50,9 @@ namespace Domain.Gerenciador
             }
         }
 
-        public void RecuperarPorId(int Id)
+        public Referencia RecuperarPorId(int Id)
         {
-            _context.Referencias.Find(Id);
+           return _context.Referencias.Find(Id);
         }
 
         public IQueryable<Referencia> RecuperarReferencia()

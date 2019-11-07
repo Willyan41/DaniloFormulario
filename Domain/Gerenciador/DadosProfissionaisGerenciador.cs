@@ -55,9 +55,9 @@ namespace Domain.Gerenciador
             }
 
         }
-        public void RecuperarPorId(int Id)
+        public DadosProfissionais RecuperarPorId(int Id)
         {
-            _context.dadosProfissionais.Find(Id);
+           return _context.dadosProfissionais.Find(Id);
         }
 
         public IQueryable<DadosProfissionais> RecuperarDadosProfissionais()
