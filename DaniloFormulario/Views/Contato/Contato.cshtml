@@ -1,0 +1,39 @@
+﻿@model IQueryable<ContatoViewModel>
+
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Celular</th>
+            <th>TelResidencia</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Email</td>
+                    <td>@p.Celular</td>
+                    <td>@p.TelResidencia</td>
+                    
+                    <td>
+                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#add-contato" href='@Url.Action("Add", "Contato", new { Id = p.Id })' title="alterar Contato">
+                            <i class="material-icons">
+                                create
+                            </i>
+                        </a>
+                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#cnt-contato" href='@Url.Action("Delete", "Contato", new { Id = p.Id })' title="deletar Contato" data-ajax-confirm="Deseja realmente excluir este Contato?">
+                            <i class="material-icons">
+                                restore_from_trash
+                            </i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

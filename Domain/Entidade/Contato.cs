@@ -2,6 +2,7 @@
 {
     public class Contato : EntidadeBase
     {
+        
         public string Email { get; set; }
 
         public int Celular { get; set; }

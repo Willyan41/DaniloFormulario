@@ -64,9 +64,9 @@ namespace Domain.Gerenciador
 
 
         }
-        public void RecuperarPorId(int Id)
+        public Contato RecuperarPorId(int Id)
         {
-            _context.Contatos.Find(Id);
+           return _context.Contatos.Find(Id);
 
         }
 

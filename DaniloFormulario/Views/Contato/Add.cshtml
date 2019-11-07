@@ -1,0 +1,25 @@
+﻿@model ContatoViewModel
+<form asp-controller="Contato" asp-action="Add" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="Celular">Celular</label>
+            <input asp-for="Celular" required class="pure-input-2-3" />
+        </div>
+
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="TelResidencia">TelResidencia</label>
+            <input asp-for="TelResidencia" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

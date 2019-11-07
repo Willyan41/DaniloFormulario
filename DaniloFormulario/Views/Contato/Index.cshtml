@@ -1,0 +1,11 @@
+﻿@model ContatoViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Bem vindo a nossa página de Contatos</h2>
+
+<div id="add-contato">
+    @Html.Partial("Add", Model)
+</div>
