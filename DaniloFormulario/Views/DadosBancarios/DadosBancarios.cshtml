@@ -1,0 +1,45 @@
+﻿@model IQueryable<DadosBancariosViewModel>
+
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Agencia</th>
+            <th>Banco</th>
+            <th>CodigoBanco</th>
+            <th>Conta</th>
+            <th>Obs</th>
+            <th>TempoConta</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            foreach (var p in Model)
+            {
+        <tr>
+            <td>@p.Agencia</td>
+            <td>@p.Banco</td>
+            <td>@p.CodigoBanco</td>
+            <td>@p.Conta</td>
+            <td>@p.Obs</td>
+            <td>@p.TempoConta</td>
+
+            <td>
+                <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#add-DadosBancarios" href='@Url.Action("Add", "DadosBancarios", new { Id = p.Id })' title="alterar Dados Bancarios">
+                    <i class="material-icons">
+                        create
+                    </i>
+                </a>
+                <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#cnt-DadosBancarios" href='@Url.Action("Delete", "DadosBancarios", new { Id = p.Id })' title="deletar Dados Bancarios" data-ajax-confirm="Deseja realmente excluir Dados Bancarios?">
+                    <i class="material-icons">
+                        restore_from_trash
+                    </i>
+                </a>
+            </td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>

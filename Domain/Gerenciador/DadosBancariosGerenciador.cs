@@ -37,7 +37,7 @@ namespace Domain.Gerenciador
 
             }
         }
-        public void Remove(DadosBancarios dadosBancarios)
+        public void Delete(DadosBancarios dadosBancarios)
         {
             try
             {
@@ -57,10 +57,10 @@ namespace Domain.Gerenciador
 
         }
 
-        public void RecuperarPorId(int Id)
+        public DadosBancarios RecuperarPorId(int Id)
         {
 
-            _context.dadosBancarios.Find(Id);
+           return _context.dadosBancarios.Find(Id);
 
         }
 

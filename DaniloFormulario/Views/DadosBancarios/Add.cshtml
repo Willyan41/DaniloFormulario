@@ -1,0 +1,38 @@
+﻿@model DadosBancariosViewModel
+<form asp-controller="DadosBancarios" asp-action="Add" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="Agencia">Agencia</label>
+            <input asp-for="Agencia" required class="pure-input-2-3" />
+        </div>
+        <div class="pure-control-group">
+            <label asp-for="Banco">Banco</label>
+            <input asp-for="Banco" required class="pure-input-2-3" />
+        </div>
+
+
+        <div class="pure-control-group">
+            <label asp-for="CodigoBanco">Codigo Banco</label>
+            <input asp-for="CodigoBanco" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="Conta">Conta</label>
+            <input asp-for="Conta" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="Obs">Observação</label>
+            <input asp-for="Obs" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="TempoConta">Tempo de Conta</label>
+            <input asp-for="TempoConta" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

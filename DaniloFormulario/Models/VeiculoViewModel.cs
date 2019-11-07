@@ -10,6 +10,8 @@ namespace DaniloFormulario.Models
         public string NomeVeiculo { get; set; }
         public double Valor { get; set; }
 
+        public IQueryable<VeiculoViewModel> Veiculos { get; set; }
+
 
     }
 }
