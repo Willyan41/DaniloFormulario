@@ -1,0 +1,18 @@
+﻿@model VeiculoViewModel
+<form asp-controller="Veiculo" asp-action="Add" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="NomeVeiculo">Nome Veiculo</label>
+            <input asp-for="NomeVeiculo" required class="pure-input-2-3" />
+        </div>
+        <div class="pure-control-group">
+            <label asp-for="Valor">Valor</label>
+            <input asp-for="Valor" required class="pure-input-2-3" />
+        </div>
+
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

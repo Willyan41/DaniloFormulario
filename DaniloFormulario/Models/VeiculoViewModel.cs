@@ -7,6 +7,7 @@ namespace DaniloFormulario.Models
 {
     public class VeiculoViewModel
     {
+        public int Id { get; set; }
         public string NomeVeiculo { get; set; }
         public double Valor { get; set; }
 

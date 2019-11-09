@@ -1,0 +1,23 @@
+﻿@model EnderecoViewModel
+<form asp-controller="Endereco" asp-action="Add" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="Endereco1">Endereco</label>
+            <input asp-for="Endereco1" required class="pure-input-2-3" />
+        </div>
+        <div class="pure-control-group">
+            <label asp-for="CEP">CEP</label>
+            <input asp-for="CEP" required class="pure-input-2-3" />
+        </div>
+
+
+        <div class="pure-control-group">
+            <label asp-for="TempoResidencia">Tempo de Residencia</label>
+            <input asp-for="TempoResidencia" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

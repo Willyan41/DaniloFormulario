@@ -1,0 +1,18 @@
+﻿@model ReferenciaViewModel
+<form asp-controller="Referencia" asp-action="Add" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="Nome">Nome</label>
+            <input asp-for="Nome" required class="pure-input-2-3" />
+        </div>
+        <div class="pure-control-group">
+            <label asp-for="Telefone">Telefone</label>
+            <input asp-for="Telefone" required class="pure-input-2-3" />
+        </div>
+
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

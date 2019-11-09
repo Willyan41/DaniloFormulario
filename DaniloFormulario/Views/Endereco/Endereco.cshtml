@@ -1,0 +1,39 @@
+﻿@model IQueryable<EnderecoViewModel>
+
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Endereco1</th>
+            <th>CEP</th>
+            <th>TempoResidencia</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Endereco1</td>
+                    <td>@p.CEP</td>
+                    <td>@p.TempoResidencia</td>
+
+                    <td>
+                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#add-Endereco" href='@Url.Action("Add", "Endereco", new { Id = p.Id })' title="alterar Endereco">
+                            <i class="material-icons">
+                                create
+                            </i>
+                        </a>
+                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#cnt-Endereco" href='@Url.Action("Delete", "Endereco", new { Id = p.Id })' title="deletar Endereco" data-ajax-confirm="Deseja realmente excluir Dados Profissionais?">
+                            <i class="material-icons">
+                                restore_from_trash
+                            </i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
